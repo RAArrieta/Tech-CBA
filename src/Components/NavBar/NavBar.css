@@ -6,6 +6,14 @@
     align-items: center;
     list-style-type: none;
     color: white;    
+    padding: 0;
+    margin: 0;
+    border-top: solid white 3px;
+    border-bottom: solid white 3px;
+}
+
+.rubro {
+    cursor: pointer;
 }
 
 .rubro:hover {

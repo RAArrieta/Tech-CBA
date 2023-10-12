@@ -1,0 +1,64 @@
+.footer {
+    background: rgb(255,175,0);
+    background: -moz-linear-gradient(90deg, rgba(255,175,0,1) 1%, rgba(240,233,12,1) 78%);
+    background: -webkit-linear-gradient(90deg, rgba(255,175,0,1) 1%, rgba(240,233,12,1) 78%);
+    background: linear-gradient(90deg, rgba(255,175,0,1) 1%, rgba(240,233,12,1) 78%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffaf00",endColorstr="#f0e90c",GradientType=1);
+    height: 230px;
+    cursor: default;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "der centro izq";
+    justify-content: center;
+    align-items: center ;
+}
+.footerCentro {
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    grid-area: centro;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.footerDer {
+    grid-area: der;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 15px;
+}
+.alineoFooterDer {
+    display: flex;
+    justify-content: center;
+    align-items: center;            
+}
+.imgFooter {
+    height: 40px;
+    width: 40px;               
+}
+.alinearFooter {
+    padding-left: 15px;
+    width: 200px;
+}
+.footerIzq {
+    grid-area: izq;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rubro-footer {
+    background-color: transparent;
+    border: none;
+    
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+}
+.rubro-footer:hover {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
