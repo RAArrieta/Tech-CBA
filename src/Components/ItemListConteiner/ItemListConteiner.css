@@ -1,0 +1,8 @@
+h1 {
+    font-size: 100px;
+    text-align: center;
+    border: solid 2px rgb(214, 128, 15);
+    margin: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
