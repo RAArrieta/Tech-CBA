@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
     return (
         <ul className="navBar">
-            <li onClick={() => console.log("Click Notebook")} className="rubro">Notebooks</li>
-            <li onClick={() => console.log("Click PC")} className="rubro">PCs de Escritorio</li>
-            <li onClick={() => console.log("Click Monitor")} className="rubro">Monitores</li>
-            <li onClick={() => console.log("Click Impresora")} className="rubro">Impresoras</li>
-            <li onClick={() => console.log("Click VGA")} className="rubro">Placas de Video</li>
-            <li onClick={() => console.log("Click Almacenamiento")} className="rubro">Almacenamiento</li>
+            <Link to="/">Home</Link>
+            <Link to="/produtos/Notebooks">Notebooks</Link>
+            <Link to="/produtos/PCs de Escritorio">PCs de Escritorio</Link>
+            <Link to="/produtos/Monitores">Monitores</Link>
+            <Link to="/produtos/Impresoras">Impresoras</Link>
+            <Link to="/produtos/Placas de Video">Placas de Video</Link>
+            <Link to="/produtos/Almacenamiento">Almacenamiento</Link>
         </ul>
     )
 }
