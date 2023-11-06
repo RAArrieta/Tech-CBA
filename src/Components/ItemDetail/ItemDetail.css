@@ -1,0 +1,38 @@
+.container-itemdetail {
+  margin: 30px;
+}
+
+.img-itemdetail {
+  height: 500px;
+  width: 500px;
+  border: solid black 1px;
+  padding: 20px;
+}
+
+.itemdetail {
+  display: flex;
+  justify-content: center;
+}
+
+.container-detail {
+  margin: 30px;
+}
+
+.precio {
+  margin: 20px;
+}
+.comprar {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  background-color: rgb(238, 235, 207);
+  border: solid 1px rgb(71, 67, 54);
+  border-radius: 5px;
+}
+
+.comprar:hover {
+  color: white;
+  background-color: rgb(236, 223, 105);
+}
+
+

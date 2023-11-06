@@ -1,21 +1,24 @@
 .navBar {
-    background-color: rgb(47, 47, 110);
-    height: 40px;
+    text-decoration: none;
+    background-color: rgb(243, 206, 20);
+    height: 120px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
-    color: white;    
+    /* color: white;     */
     padding: 0;
     margin: 0;
     border-top: solid white 3px;
     border-bottom: solid white 3px;
 }
 
-.rubro {
-    cursor: pointer;
+.categorias {
+    text-decoration: none;
+    color: rgb(82, 79, 79);
+
 }
 
-.rubro:hover {
-    color:rgb(214, 184, 15)
+.categorias:hover {
+    color: black;
 }

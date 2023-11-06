@@ -1,21 +1,30 @@
+import { Link } from "react-router-dom/dist";
+import "./ItemDetail.css";
 
-
-const ItemDetail = ({producto}) => {
+const ItemDetail = ({ producto }) => {
   return (
-    <div>
-      {
-        producto &&
+    <div className="container-itemdetail">
+      {producto && (
+        <div className="itemdetail">
           <div>
-            <img className="img-card" src={`${producto.imagen}&id=${producto.id}`} alt={producto.nombre} />
-            <h2>{producto.nombre}</h2>
-            <h3>{`$${producto.precio}`}</h3>
-            <p>{producto.descripcion}</p>
+            <img
+              className="img-itemdetail"
+              src={`${producto.imagen}&id=${producto.id}`}
+              alt={producto.nombre}
+            />
           </div>
-          
-      }
+          <div className="container-detail">
+            <h1>{producto.nombre}</h1>
+            <p>{producto.descripcion}</p>
+            <h2 className="precio">{`ARS ${producto.precio}`}</h2>
+            <Link to="#" className="comprar">
+              Comprar
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetail
-
+export default ItemDetail;
