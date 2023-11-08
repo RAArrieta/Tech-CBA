@@ -35,4 +35,35 @@
   background-color: rgb(236, 223, 105);
 }
 
+.contador {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 8px;
+}
 
+.stock {
+  margin-bottom: 10px;
+}
+
+.boton {
+  height: 30px;
+  width: 30px;
+  color: black;
+  background-color: rgb(238, 235, 207);
+  border: solid 1px rgb(71, 67, 54);
+  border-radius: 5px;
+}
+
+.boton:hover {
+  color: white;
+  background-color: rgb(236, 223, 105);
+}
+
+.cantidad {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 1px;
+}

@@ -1,7 +1,22 @@
-import { Link } from "react-router-dom/dist";
 import "./ItemDetail.css";
+import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
 
 const ItemDetail = ({ producto }) => {
+  const [cantidad, setCantidad] = useState(1);
+
+  const agregar = () => {
+    cantidad < producto.stock && setCantidad(cantidad + 1);
+  };
+
+  const descontar = () => {
+    cantidad > 1 && setCantidad(cantidad - 1);
+  };
+
+  const agregarAlCarrito = ()=>{
+    console.log({...producto, cantidad})
+  }
+
   return (
     <div className="container-itemdetail">
       {producto && (
@@ -17,9 +32,13 @@ const ItemDetail = ({ producto }) => {
             <h1>{producto.nombre}</h1>
             <p>{producto.descripcion}</p>
             <h2 className="precio">{`ARS ${producto.precio}`}</h2>
-            <Link to="#" className="comprar">
-              Comprar
-            </Link>
+            <ItemCount
+              cantidad={cantidad}
+              agregar={agregar}
+              descontar={descontar}
+              stock={producto.stock}
+              agregarAlCarrito={agregarAlCarrito}
+            />
           </div>
         </div>
       )}

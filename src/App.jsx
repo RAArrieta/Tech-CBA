@@ -9,7 +9,6 @@ import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner"
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
       <NavBar />
       <Banners />
       <Routes>
