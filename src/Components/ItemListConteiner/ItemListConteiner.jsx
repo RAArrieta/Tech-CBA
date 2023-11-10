@@ -7,7 +7,6 @@ const ItemListConteiner = () => {
   const [listaProductos, setListaProductos] = useState([]);
   const [titulo, setTitulo] = useState("Productos");
   const categoria = useParams().categoria;
-  console.log(categoria);
 
   const buscarProductos = () => {
     fetch("https://653d18e4f52310ee6a99e04d.mockapi.io/productos/")

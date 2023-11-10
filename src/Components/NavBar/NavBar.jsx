@@ -32,7 +32,6 @@ const NavBar = () => {
       <Link to="/produtos/Almacenamiento" className="categorias">
         Almacenamiento
       </Link>
-
       <CartWidget />
     </ul>
   );
