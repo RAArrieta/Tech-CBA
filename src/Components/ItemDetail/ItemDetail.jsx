@@ -4,14 +4,14 @@ import { useContext, useState } from "react";
 import { CartContext } from "../CartContext/CartContext";
 
 const ItemDetail = ({ producto }) => {
-  const { carrito, agregarAlCarrito } = useContext(CartContext);
+  const { agregarAlCarrito } = useContext(CartContext);
 
   const [cantidad, setCantidad] = useState(1);
 
   const agregar = () => {
     cantidad < producto.stock && setCantidad(cantidad + 1);
   };
-  console.log(carrito);
+
   const descontar = () => {
     cantidad > 1 && setCantidad(cantidad - 1);
   };
@@ -23,7 +23,7 @@ const ItemDetail = ({ producto }) => {
           <div>
             <img
               className="img-itemdetail"
-              src={`${producto.imagen}&id=${producto.id}`}
+              src={`${producto.imagen}`}
               alt={producto.nombre}
             />
           </div>

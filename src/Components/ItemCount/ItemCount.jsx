@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
-const ItemCount = ({ cantidad, agregar, descontar, stock, agregarAlCarrito }) => {
+const ItemCount = ({
+  cantidad,
+  agregar,
+  descontar,
+  stock,
+  agregarAlCarrito,
+}) => {
   return (
     <>
       <div className="stock">Cantidad: {stock}</div>

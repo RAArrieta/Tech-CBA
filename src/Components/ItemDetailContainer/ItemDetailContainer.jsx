@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../Firebase/config";
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState(null);
+  const [producto, setProducto] = useState(null); //const [item, setItem] = useState(null);
   const id = useParams().id;
 
-  const buscarProducto = () => {
-    fetch(`https://653d18e4f52310ee6a99e04d.mockapi.io/productos/${id}`)
-      .then((resp) => resp.json())
-      .then((json) => setProducto(json))
-      .catch((error) => console.log(error));
-  };
-
   useEffect(() => {
-    buscarProducto(id);
-  }, []);
+    const docRef = doc(db, "productos", id);
+    getDoc(docRef).then((resp) => {
+      setProducto({ ...resp.data(), id: resp.id });
+    });
+  }, [id]);
 
   return <ItemDetail producto={producto} />;
 };

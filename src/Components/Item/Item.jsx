@@ -5,14 +5,13 @@ const Item = ({ productos }) => {
     <Link className="card" to={`/item/${productos.id}`}>
       <img
         className="img-card"
-        src={`${productos.imagen}&id=${productos.id}`}
+        src={`${productos.imagen}`}
         alt={productos.nombre}
       />
       <div className="data-prod">
         <h4>{productos.nombre}</h4>
         <h4>{`$${productos.precio}`}</h4>
       </div>
-
     </Link>
   );
 };
