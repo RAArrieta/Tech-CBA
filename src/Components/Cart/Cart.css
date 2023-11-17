@@ -1,0 +1,92 @@
+.carrito-container {
+  margin: 10px 200px;
+}
+
+.carrito-producto {
+  display: grid;
+  grid-template-columns: 5% 50% 14% 14% 14% 2%;
+  grid-template-rows: 60px 5px;
+  grid-template-areas:
+    "cod nom cnt prc sbt eli"
+    "div div div div div div";
+  align-items: center;
+}
+.producto-codigo {
+  grid-area: cod;
+  margin: 0;
+}
+
+.producto-nombre {
+  grid-area: nom;
+  margin: 0;
+}
+
+.producto-cantidad {
+  grid-area: cnt;
+  margin: 0;
+}
+
+.producto-precio {
+  grid-area: prc;
+  margin: 0;
+}
+
+.producto-subtotal {
+  grid-area: sbt;
+  margin: 0;
+}
+
+.producto-eliminar {
+  grid-area: eli;
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+.producto-eliminar:hover {
+  background-color: rgb(230, 223, 223);
+}
+
+.producto-divisor {
+  grid-area: div;
+  margin: 0;
+}
+
+.carrito-total {
+  margin: 20px 10px;
+}
+
+.eliminar-pedido {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(248, 240, 240);
+  border-radius: 5px;
+  border: solid 1px black;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.eliminar-pedido:hover {
+  background-color: rgb(230, 223, 223);
+}
+
+.agregar-producto {
+  background-color: rgb(252, 247, 247);
+  border-radius: 5px;
+  border: solid 1px black;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.agregar-producto:hover {
+  background-color: rgb(230, 223, 223);
+}
+
+.mensaje-agregar {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

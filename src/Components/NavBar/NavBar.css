@@ -1,24 +1,51 @@
 .navBar {
-    text-decoration: none;
-    background-color: rgb(243, 206, 20);
-    height: 120px;
-    display: flex;
+  text-decoration: none;
+  background-color: rgb(243, 206, 20);
+  height: 120px;
+  display: grid;
+  grid-template-columns: 40% 10% 10% 10%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo home prod carrito";
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  /* display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-    /* color: white;     */
-    padding: 0;
-    margin: 0;
-    border-top: solid white 3px;
-    border-bottom: solid white 3px;
+    align-items: center; */
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-top: solid white 3px;
+  border-bottom: solid white 3px;
 }
 
 .categorias {
-    text-decoration: none;
-    color: rgb(82, 79, 79);
-
+  grid-area: home;
+  text-decoration: none;
+  color: rgb(82, 79, 79);
+  margin-left: 10px;
 }
 
 .categorias:hover {
-    color: black;
+  color: black;
+}
+
+.dropdown-menu {
+  background-color: rgb(245, 245, 242);
+}
+
+.logo {
+  grid-area: logo;
+}
+.nav-link {
+  color: rgb(82, 79, 79);
+}
+
+.nav-item {
+  grid-area: prod;
+}
+
+.CartWidget {
+  grid-area: carrito;
 }

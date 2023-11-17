@@ -5,7 +5,6 @@ export const CartContext = createContext();
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
 
 export const CartProvider = ({ children }) => {
-  
   const [carrito, setCarrito] = useState(carritoLS);
 
   const agregarAlCarrito = (producto, cantidad) => {
@@ -16,13 +15,10 @@ export const CartProvider = ({ children }) => {
     );
     if (prodExistente) {
       prodExistente.cantidad += cantidad;
-      // setCarrito(newCarrito);
     } else {
-      // setCarrito([...carrito, productoAgregado]);
-      newCarrito.push(productoAgregado)
+      newCarrito.push(productoAgregado);
     }
-    setCarrito(newCarrito)
-    // localStorage.setItem()
+    setCarrito(newCarrito);
   };
 
   const contadorCarrito = () => {
@@ -37,9 +33,14 @@ export const CartProvider = ({ children }) => {
     setCarrito([]);
   };
 
-  useEffect (()=>{
-    localStorage.setItem("carrito",JSON.stringify(carrito))
-  },[carrito])
+  const eliminarProducto = (id) => {
+    const productosFiltrados = carrito.filter((prod) => prod.id !== id);
+    setCarrito(productosFiltrados);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
 
   return (
     <CartContext.Provider
@@ -49,6 +50,7 @@ export const CartProvider = ({ children }) => {
         contadorCarrito,
         total,
         eliminarPedido,
+        eliminarProducto,
       }}
     >
       {children}

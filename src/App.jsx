@@ -6,13 +6,10 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
 
 import { CartProvider } from "./Components/CartContext/CartContext";
-import Carrito from "./Components/Carrito/Carrito";
+import Carrito from "./Components/Cart/Cart";
 
 function App() {
   return (
-    // <CartContext.Provider
-    //   value={{ carrito, agregarAlCarrito, contadorCarrito, total, eliminarPedido }}
-    // >
     <CartProvider>
       <BrowserRouter>
         <NavBar />
@@ -26,7 +23,6 @@ function App() {
         <Footer />
       </BrowserRouter>
     </CartProvider>
-    // </CartContext.Provider>
   );
 }
 

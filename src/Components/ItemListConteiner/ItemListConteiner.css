@@ -21,10 +21,16 @@
   border: solid gray 1px;
   border-radius: 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  height: 550px;
+  height: 350px;
   width: 300px;
   align-items: center;
+  text-decoration: none;
 }
+
+.card:hover {
+  border: solid rgb(214, 128, 15) 1px;
+}
+
 .img-card {
   height: 250px;
   width: 250px;
@@ -36,6 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
 }
 
 .item-detail {
