@@ -22,6 +22,14 @@ const ItemCount = ({
       <Link to="#" className="comprar" onClick={agregarAlCarrito}>
         Comprar
       </Link>
+      <div className="btn-agregar-detalle">
+        <Link to="/" className="comprar">
+          Agregue más productos
+        </Link>
+        <Link to="/carrito" className="comprar">
+          Detalle de Compra
+        </Link>
+      </div>
     </>
   );
 };

@@ -1,0 +1,14 @@
+.form-container {
+  margin: 10px 200px;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 20px;
+}
+
+.conf-compra {
+  width: 100px;
+}
