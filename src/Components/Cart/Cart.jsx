@@ -43,6 +43,9 @@ const Carrito = () => {
           <Link to="/" className="eliminar-pedido">
             Agregue más productos
           </Link>
+          <Link to="/checkout" className="eliminar-pedido">
+            Terminar compra
+          </Link>
         </div>
       ) : (
         <div>
