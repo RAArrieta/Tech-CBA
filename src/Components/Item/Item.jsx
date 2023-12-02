@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
 import { Link } from "react-router-dom";
 
 const Item = ({ productos }) => {
+  const { theme } = useContext(CartContext);
+
   return (
-    <Link className="card" to={`/item/${productos.id}`}>
+    <Link className="card" to={`/item/${productos.id}`} style={{ backgroundColor: theme === "light" ? "white" : "#aca9a9" }}>
       <img
         className="img-card"
         src={`${productos.imagen}`}

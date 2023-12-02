@@ -4,15 +4,15 @@ import { CartContext } from "../CartContext/CartContext";
 import { Link } from "react-router-dom";
 
 const Carrito = () => {
-  const { carrito, total, eliminarPedido, eliminarProducto } =
-    useContext(CartContext);
+  const { carrito, total, eliminarPedido, eliminarProducto } = useContext(CartContext);
+  const { theme } = useContext(CartContext);
 
   const eliminarPed = () => {
     eliminarPedido();
   };
 
   return (
-    <div className="carrito-container">
+    <div className="carrito-container" style={{ backgroundColor: theme === "light" ? "white" : "#aca9a9" }}>
       <h1>Carrito</h1>
       {carrito.map((prod) => {
         return (

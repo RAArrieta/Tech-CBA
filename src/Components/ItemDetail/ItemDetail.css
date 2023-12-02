@@ -21,6 +21,7 @@
 .precio {
   margin: 20px;
 }
+
 .comprar {
   text-decoration: none;
   color: black;
@@ -65,4 +66,3 @@
   justify-content: center;
   border: solid black 1px;
 }
-

@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../Firebase/config";
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState(null); 
+  const [producto, setProducto] = useState(null);
   const id = useParams().id;
 
   useEffect(() => {

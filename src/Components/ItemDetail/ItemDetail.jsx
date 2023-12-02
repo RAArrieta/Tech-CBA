@@ -4,20 +4,19 @@ import { useContext, useState } from "react";
 import { CartContext } from "../CartContext/CartContext";
 
 const ItemDetail = ({ producto }) => {
-  const { agregarAlCarrito } = useContext(CartContext);
-
   const [cantidad, setCantidad] = useState(1);
+  const { agregarAlCarrito } = useContext(CartContext);
+  const { theme } = useContext(CartContext);
 
   const agregar = () => {
     cantidad < producto.stock && setCantidad(cantidad + 1);
   };
-
   const descontar = () => {
     cantidad > 1 && setCantidad(cantidad - 1);
   };
 
   return (
-    <div className="container-itemdetail">
+    <div className="container-itemdetail" style={{ backgroundColor: theme === "light" ? "white" : "#aca9a9" }}>
       {producto && (
         <div className="itemdetail">
           <div>

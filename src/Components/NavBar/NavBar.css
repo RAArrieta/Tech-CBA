@@ -3,16 +3,12 @@
   background-color: rgb(243, 206, 20);
   height: 120px;
   display: grid;
-  grid-template-columns: 40% 10% 10% 10%;
+  grid-template-columns: 40% 10% 10% 10% 10%;
   grid-template-rows: 1fr;
-  grid-template-areas: "logo home prod carrito";
+  grid-template-areas: "logo home prod carrito btn";
   justify-content: center;
   justify-items: center;
   align-items: center;
-  /* display: flex;
-    justify-content: space-evenly;
-    align-items: center; */
-
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -48,4 +44,11 @@
 
 .CartWidget {
   grid-area: carrito;
+}
+
+.btn-darkmode {
+  grid-area: btn;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
 }

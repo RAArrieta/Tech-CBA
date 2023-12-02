@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
 import CartWidget from "./CartWidge/CartWidget";
 
 const NavBar = () => {
+  const { theme, setTheme } = useContext(CartContext);
+  
   return (
     <ul className="navBar">
       <img
@@ -49,6 +53,12 @@ const NavBar = () => {
         </ul>
       </li>
       <CartWidget />
+      <button className="btn-darkmode" onClick={() => setTheme(theme === "light" ? "dark" : "light")} style={{ backgroundColor: theme === "light" ? "#aca9a9" : "#e5e1e1" }}>
+        <img
+          style={{ backgroundColor: theme === "light" ? "#aca9a9" : "#e5e1e1" }}
+          src={require("./imgNavBar/brillo.png")}
+          alt="Brillo"
+        /></button>
     </ul>
   );
 };

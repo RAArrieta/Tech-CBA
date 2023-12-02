@@ -1,13 +1,12 @@
+import { CartProvider } from "./Components/CartContext/CartContext";
 import NavBar from "./Components/NavBar/NavBar";
 import Banners from "./Components/Banners/Banners";
-import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
-
-import { CartProvider } from "./Components/CartContext/CartContext";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Carrito from "./Components/Cart/Cart";
 import Checkout from "./Components/Checkout/Checkout";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (

@@ -38,6 +38,8 @@ export const CartProvider = ({ children }) => {
     setCarrito(productosFiltrados);
   };
 
+  const [theme, setTheme] = useState("light");
+
   useEffect(() => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }, [carrito]);
@@ -45,6 +47,8 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider
       value={{
+        theme,
+        setTheme,
         carrito,
         agregarAlCarrito,
         contadorCarrito,
